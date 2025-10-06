@@ -1,43 +1,56 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
-  <title>Project Portal</title>
-</head>
-<body>
-  <nav>
-    <h2>Project Portal</h2>
-    <ul>
-      <li><a href="project1.html">Project 1</a></li>
-      <li><a href="project2.html">Project 2</a></li>
-      <li><a href="project3.html">Project 3</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Project Portal</title>
+  </head>
+  <body>
+    <nav>
+      <h2>Project Portal</h2>
+      <ul>
+        <li><a href="project1.html">Project 1</a></li>
+        <li><a href="project2.html">Project 2</a></li>
+        <li><a href="project3.html">Project 3</a></li>
+      </ul>
+    </nav>
 
-  <div class="cards">
-    <div class="card-inner">
-      <div class="card-front">
-        <h2>HTML Project</h2>
-      </div>
-      <div class="card-back">
-        <a href="project_1/index.html">Project Link</a>
+    <div class="cards">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>HTML Project</h2>
+          </div>
+          <div class="card-back">
+            <a href="project_1/index.html" target="_blank">Project Link</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer class="bg-dark">
-    <span>&copy; 2025</span> | Vicki Burgess | Utah |
-    <a id="ttechlink" target="_blank" rel="noopener noreferrer" href="https://tooeletech.edu/">
-      Tooele Technical College
-    </a>
-    <br>
-    Last updated: <span id="lastUpdated"></span>
-  </footer>
+    <footer class="bg-dark">
+      <span>&copy; 2025</span> | Vicki Burgess | Utah |
+      <a
+        id="ttechlink"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://tooeletech.edu/"
+      >
+        Tooele Technical College
+      </a>
+      <br />
+      Last updated: <span id="lastUpdated"></span>
+    </footer>
 
-  <script src="script.js"></script>
-  <script>
-    // Example JS to auto-update the "last updated" date
-    document.getElementById("lastUpdated").textC
+    <script src="script.js"></script>
+    <script src="cards.js"></script>
+    <script>
+      // ✅ Auto-update the "Last Updated" date in the footer
+      document.getElementById("lastUpdated").textContent = new Date(
+        document.lastModified
+      ).toLocaleString();
+    </script>
+  </body>
+</html>
